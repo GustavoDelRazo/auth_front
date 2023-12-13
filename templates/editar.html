@@ -8,60 +8,90 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa; /* Color de fondo principal */
-            color: #495057; /* Color de texto principal */
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
         }
 
         .container {
-            margin-top: 50px; /* Margen superior */
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #007bff; /* Color de título principal */
+            color: #007bff;
         }
 
-        /* Estilos para el formulario de edición */
-        #edit-contact-form {
-            max-width: 400px;
-            margin: auto;
+        form {
+            margin-top: 20px;
         }
 
         .form-group {
             margin-bottom: 20px;
         }
 
-        /* Estilos para los botones */
+        label {
+            font-weight: bold;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
         .btn-primary {
-            background-color: #007bff; /* Color de fondo botón primario */
-            color: #fff; /* Color de texto botón primario */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
+            background-color: #007bff;
+            color: #fff;
+            border: none;
         }
 
         .btn-primary:hover {
-            background-color: #0056b3; /* Color de fondo al pasar el ratón */
+            background-color: #0056b3;
         }
 
         .btn-secondary {
-            background-color: #6c757d; /* Color de fondo botón secundario */
-            color: #fff; /* Color de texto botón secundario */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
         }
 
         .btn-secondary:hover {
-            background-color: #5a6268; /* Color de fondo al pasar el ratón */
+            background-color: #5a6268;
+        }
+
+        #mensaje,
+        #error-mensaje {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        #mensaje {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        #error-mensaje {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
     </style>
 </head>
 
 <body>
     <div class="container text-center">
-        <h2 class="my-4">Editar Contacto</h2>
+        <h2>Editar Contacto</h2>
 
         <form id="edit-contact-form" class="text-left">
             <div class="form-group">
@@ -87,7 +117,6 @@
         <div id="error-mensaje"></div>
     </div>
 
-    <!-- Agrega el script al final para garantizar que se cargue después de la página -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

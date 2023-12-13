@@ -8,60 +8,64 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa; /* Color de fondo principal */
-            color: #495057; /* Color de texto principal */
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
         }
 
         .container {
-            margin-top: 50px; /* Margen superior */
-        }
-
-        h1 {
-            color: #dc3545; /* Color de título principal */
-        }
-
-        /* Estilos para el detalle del contacto */
-        #detalle-contacto {
             max-width: 400px;
             margin: auto;
-            background-color: #fff; /* Color de fondo */
-            padding: 20px; /* Espaciado interno */
-            border: 1px solid #dee2e6; /* Borde */
-            border-radius: 4px; /* Bordes redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
 
-        /* Estilos para los botones */
+        h1 {
+            color: #ff0019;
+        }
+
+        #detalle-contacto {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .btn-danger,
+        .btn-secondary {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
         .btn-danger {
-            background-color: #dc3545; /* Color de fondo botón peligro */
-            color: #fff; /* Color de texto botón peligro */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
         }
 
         .btn-danger:hover {
-            background-color: #c82333; /* Color de fondo al pasar el ratón */
+            background-color: #c82333;
         }
 
         .btn-secondary {
-            background-color: #6c757d; /* Color de fondo botón secundario */
-            color: #fff; /* Color de texto botón secundario */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
         }
 
         .btn-secondary:hover {
-            background-color: #5a6268; /* Color de fondo al pasar el ratón */
+            background-color: #5a6268;
         }
 
-        /* Estilos para el mensaje de error */
         #error-mensaje {
-            color: #dc3545; /* Color de texto de error */
+            color: #dc3545;
             font-weight: bold;
             margin-top: 20px;
         }
@@ -86,7 +90,6 @@
         <div id="error-mensaje"></div>
     </div>
 
-    <!-- Agrega el script al final para garantizar que se cargue después de la página -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -8,51 +8,69 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa; /* Color de fondo principal */
-            color: #495057; /* Color de texto principal */
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            padding-top: 50px;
         }
 
         .container {
-            margin-top: 50px; /* Margen superior */
+            max-width: 800px;
+            margin: auto;
+            margin-top: 50px;
         }
 
         h1 {
-            color: #007bff; /* Color de título principal */
+            color: #000000;
         }
 
-        /* Estilos personalizados para los botones */
+        .custom-button,
+        .logout-button {
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
         .custom-button {
-            background-color: #28a745; /* Color de fondo personalizado */
-            color: #fff; /* Color de texto personalizado */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
+            background-color: #28a745;
+            color: #fff;
+            border: none;
         }
 
         .custom-button:hover {
-            background-color: #218838; /* Color de fondo al pasar el ratón */
+            background-color: #218838;
         }
 
-        /* Estilos personalizados para el botón de cerrar sesión */
         .logout-button {
-            background-color: #dc3545; /* Color de fondo personalizado para cerrar sesión */
-            color: #fff; /* Color de texto personalizado */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
+            background-color: #000000;
+            color: #fff;
+            border: none;
         }
 
         .logout-button:hover {
-            background-color: #c82333; /* Color de fondo al pasar el ratón para cerrar sesión */
+            background-color: #c82333;
+        }
+
+        .table {
+            background-color: #cdffd0;
+            color: #000000;
+            font-size: 16px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .thead-dark {
+            background-color: #ff0000;
+            color: #ffffff;
         }
     </style>
 </head>
 
 <body>
     <div class="container text-center">
-        <h1 class="my-4">Contactos</h1>
+        <h1>Contactos</h1>
 
         <div class="row justify-content-center">
             <div class="col-md-4 text-center mb-3">
@@ -77,11 +95,9 @@
             </tbody>
         </table>
 
-        <!-- Botón de cerrar sesión -->
         <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
     </div>
 
-    <!-- Agrega el script al final para garantizar que se cargue después de la página -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -91,12 +107,8 @@
             getAll();
         });
 
-        // Función para cerrar sesión
         function logout() {
-            // Eliminar la cookie que contiene el token
             document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-
-            // Redirigir a la página de inicio de sesión
             window.location.href = "/";
         }
     </script>
