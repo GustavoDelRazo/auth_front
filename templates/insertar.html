@@ -3,100 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Insertar Nuevo Contacto</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa; /* Color de fondo principal */
-            color: #495057; /* Color de texto principal */
-        }
-
-        .container {
-            margin-top: 50px; /* Margen superior */
-        }
-
-        h1 {
-            color: #000000; /* Color de título principal */
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-
-        /* Estilos para el formulario de inserción */
-        #insertForm {
-            max-width: 400px;
-            margin: auto;
-            background-color: #fff; /* Color de fondo */
-            padding: 20px; /* Espaciado interno */
-            border: 1px solid #dee2e6; /* Borde */
-            border-radius: 4px; /* Bordes redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-            margin-bottom: 20px;
-        }
-
-        /* Estilos para los botones */
-        .btn-primary {
-            background-color: #007bff; /* Color de fondo botón primario */
-            color: #fff; /* Color de texto botón primario */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3; /* Color de fondo al pasar el ratón */
-        }
-
-        .btn-secondary {
-            background-color: #6c757d; /* Color de fondo botón secundario */
-            color: #fff; /* Color de texto botón secundario */
-            border: none; /* Sin borde */
-            padding: 8px 16px; /* Espaciado interno */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cursor de puntero al pasar el ratón */
-        }
-
-        .btn-secondary:hover {
-            background-color: #5a6268; /* Color de fondo al pasar el ratón */
-        }
-
-        /* Estilos para el mensaje de resultado */
-        #insertResult {
-            color: #28a745; /* Color de texto de éxito */
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container text-center">
-        <h1>Insertar Nuevo Contacto</h1>
-
-        <form id="insertForm" class="text-left">
-            <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Insertar</button>
-            <a class="btn btn-secondary" href="/home">Regresar</a>
-        </form>
-        <div id="insertResult"></div>
-    </div>
+    <h1>Insertar Nuevo Contacto</h1>
+    <form id="insertForm">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+        <button type="submit">Insertar</button>
+        <button onclick="window.location.href = '/';">Regresar</button>
+    </form>
+    <div id="insertResult"></div>
 
     <!-- Agrega el script al final para garantizar que se cargue después de la página -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../static/js/insertar.js"></script>
+
+    <script>
+        // Add your JavaScript functions here if they are not in insertar.js
+        document.getElementById("insertForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Add logic to handle form submission using functions from insertar.js
+            // For example: insertContact();
+
+            // Display result in the insertResult div
+            // For example: document.getElementById("insertResult").innerHTML = "Contact inserted successfully";
+        });
+    </script>
 </body>
 
 </html>

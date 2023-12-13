@@ -1,67 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <title>Detalles del Contacto</title>
-    <!-- Enlaza tu archivo JavaScript específico para la página "ver.html" -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js/ver.js') }}"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            font-family: Arial, sans-serif;
-            padding-top: 50px;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #000000;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-
-        #contact-details {
-            margin-top: 20px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Visualizar Contacto</title>
+    <script type="text/javascript" src="../static/js/ver.js"></script>
 </head>
-
 <body>
-    <div class="container text-center">
-        <h1>Detalles del Contacto</h1>
-        <div id="contact-details">
-            <!-- Aquí se mostrarán los detalles del contacto -->
-        </div>
-        <a class="btn btn-primary" href="/home">Regresar</a>
+    <h1>Detalles del Contacto</h1>
+    <div id="contact-details">
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+        <button id="back-to-index">Regresar</button>
     </div>
-    <!-- Agrega el script al final para garantizar que se cargue después de la página -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
