@@ -8,25 +8,25 @@ async function login() {
         const response = await fetch(`${backendURL}/token`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": "Basic " + btoa(`${username}:${password}`),
+                "Content-Type": "application/json",  // Cambiado a "application/json" para el nuevo método
             },
-            body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
         });
 
         if (response.ok) {
             const data = await response.json();
-            
-            // Almacenar el token en las cookies
-            document.cookie = `token=${data.token}; path=/`;
+
+            // Almacenar el token en las cookies con HttpOnly y Secure
+            document.cookie = `token=${data.token}; path=/; secure; samesite=strict`;
 
             // Redirigir a la página "/home"
             window.location.href = "/home";
         } else {
             const data = await response.json();
-            document.getElementById("message").innerText = `Inicio de sesion fallido. ${data.detail}`;
+            document.getElementById("message").innerText = `Inicio de sesión fallido. ${data.detail}`;
         }
     } catch (error) {
-        console.error("Error during login:", error);
-        document.getElementById("message").innerText = "Ocurrio un error para iniciar Sesion.";
+        console.error("Error durante el inicio de sesión:", error);
+        document.getElementById("message").innerText = "Ocurrió un error al iniciar sesión.";
     }
 }
