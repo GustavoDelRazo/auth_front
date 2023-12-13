@@ -4,7 +4,7 @@ function searchByEmail() {
     const request = new XMLHttpRequest();
 
     // Hacer una solicitud GET al endpoint del backend para buscar por correo electrónico
-    request.open('GET', `https://8000-axelcarrill-herokubacke-l038cx8hr2i.ws-us106.gitpod.io/contactos/${emailInput}`);
+    request.open('GET', `https://8000-gustavodelrazo-authback-8deexani14p.ws-us106.gitpod.io/contactos/${emailInput}`);
     
     // Incluir el token en el encabezado de la solicitud
     request.setRequestHeader("Authorization", `Bearer ${token}`);

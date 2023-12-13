@@ -2,7 +2,7 @@ async function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    const backendURL = "https://8000-axelcarrill-herokubacke-l038cx8hr2i.ws-us106.gitpod.io"; // Reemplaza con la URL de tu backend
+    const backendURL = "https://8000-gustavodelrazo-authback-8deexani14p.ws-us106.gitpod.io"; // Reemplaza con la URL de tu backend
 
     try {
         const response = await fetch(`${backendURL}/token`, {
