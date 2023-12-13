@@ -11,7 +11,7 @@ function getAll() {
     }
 
     var request = new XMLHttpRequest();
-    request.open('GET', "https://contactos-backend-2x51.onrender.com/contactos");
+    request.open('GET', "https://8000-axelcarrill-herokubacke-l038cx8hr2i.ws-us106.gitpod.io/contactos");
 
     // Agregar el token al encabezado de autorización
     request.setRequestHeader("Authorization", `Bearer ${token}`);

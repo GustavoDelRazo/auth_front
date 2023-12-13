@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Contactos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-color: #f8f9fa; /* Color de fondo principal */
+            color: #495057; /* Color de texto principal */
+        }
+
+        .container {
+            margin-top: 50px; /* Margen superior */
+        }
+
+        h1 {
+            color: #007bff; /* Color de título principal */
+        }
+
         /* Estilos personalizados para los botones */
         .custom-button {
-            background-color: #007BFF; /* Color de fondo personalizado */
+            background-color: #28a745; /* Color de fondo personalizado */
             color: #fff; /* Color de texto personalizado */
             border: none; /* Sin borde */
             padding: 8px 16px; /* Espaciado interno */
@@ -17,7 +31,7 @@
         }
 
         .custom-button:hover {
-            background-color: #0056b3; /* Color de fondo al pasar el ratón */
+            background-color: #218838; /* Color de fondo al pasar el ratón */
         }
 
         /* Estilos personalizados para el botón de cerrar sesión */
@@ -35,16 +49,17 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container text-center">
         <h1 class="my-4">Contactos</h1>
 
         <div class="row justify-content-center">
             <div class="col-md-4 text-center mb-3">
-                <a class="btn btn-primary" href="buscar">Buscar</a>
+                <a class="btn custom-button" href="buscar">Buscar</a>
             </div>
             <div class="col-md-4 text-center mb-3">
-                <a class="btn btn-success" href="insertar">Insertar</a>
+                <a class="btn custom-button" href="insertar">Insertar</a>
             </div>
         </div>
 
@@ -86,4 +101,5 @@
         }
     </script>
 </body>
+
 </html>
